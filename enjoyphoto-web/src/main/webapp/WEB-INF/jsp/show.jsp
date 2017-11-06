@@ -37,10 +37,10 @@
 <h1>TTTTT</h1>
 <form action="" method="post" name="myform">
     登录名：<input id="loginName" name="loginName"/><br/>
-      密码：<input type="password" id="password" name="password"/><br/>
-      姓名：<input id="userName" name="userName"/><br/>
-      手机：<input id="mobile" name="mobile"/><br/>
-      邮箱：<input id="email" name="email"/><br/>
+        密码：<input type="password" id="password" name="password"/><br/>
+        姓名：<input id="userName" name="userName"/><br/>
+        手机：<input id="mobile" name="mobile"/><br/>
+        邮箱：<input id="email" name="email"/><br/>
     <input type="button" id="test" value="test"/>
 </form>
 </body>
