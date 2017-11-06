@@ -6,6 +6,7 @@
     <resultMap id="BaseResultMap" type="com.enjoyphoto.entity.webuser.WebUserEntity" >
         <result column="ID" property="id" jdbcType="INTEGER" />
         <result column="LoginName" property="loginName" jdbcType="VARCHAR" />
+        <result column="PassWord" property="passWord" jdbcType="VARCHAR" />
         <result column="UserName" property="userName" jdbcType="VARCHAR" />
         <result column="Mobile" property="mobile" jdbcType="VARCHAR" />
         <result column="Email" property="email" jdbcType="VARCHAR" />
@@ -15,8 +16,8 @@
     </resultMap>
 
     <insert id="createWebUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.enjoyphoto.entity.webuser.WebUserEntity">
-        insert into web_user(LoginName,UserName,Mobile,Email,Logo,CreateDate,UpdateDate)
-        values(#{LoginName},#{UserName},#{Mobile},#{Email},#{Logo},#{CreateDate},#{UpdateDate})
+        insert into web_user(LoginName,PassWord,UserName,Mobile,Email,Logo,CreateDate,UpdateDate)
+        values(#{loginName},#{passWord},#{userName},#{mobile},#{email},#{logo},#{createDate},#{updateDate})
     </insert>
 
 

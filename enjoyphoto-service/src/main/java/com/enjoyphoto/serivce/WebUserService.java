@@ -7,5 +7,5 @@ import com.enjoyphoto.entity.webuser.WebUserEntity;
  */
 public interface WebUserService {
 
-    int createWebUser(WebUserEntity webUser);
+    long createWebUser(WebUserEntity webUser);
 }

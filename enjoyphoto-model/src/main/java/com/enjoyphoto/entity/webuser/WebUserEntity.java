@@ -8,10 +8,19 @@ import com.enjoyphoto.entity.base.BaseEntity;
 public class WebUserEntity extends BaseEntity{
 
     private String loginName;
+    private String passWord;
     private String userName;
     private String mobile;
     private String email;
     private String logo;
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
 
     public String getLogo() {
         return logo;

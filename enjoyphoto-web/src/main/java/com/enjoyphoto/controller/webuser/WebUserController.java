@@ -25,7 +25,8 @@ public class WebUserController {
     {
         ModelAndView mav = new ModelAndView();
         WebUserEntity webUserEntity = new WebUserEntity();
-        webUserEntity.setLoginName("test");
+        webUserEntity.setLoginName("test111");
+        webUserEntity.setPassWord("123456");
         webUserEntity.setEmail("xxx@163.com");
         webUserEntity.setLogo("josfs2222bbbc");
         webUserEntity.setMobile("18015052006");
