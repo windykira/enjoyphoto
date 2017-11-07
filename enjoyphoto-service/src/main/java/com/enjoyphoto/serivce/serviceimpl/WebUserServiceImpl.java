@@ -19,4 +19,9 @@ public class WebUserServiceImpl implements WebUserService {
         int addKey = webUserDao.createWebUser(webUser);
         return webUser.getId();
     }
+
+    public WebUserEntity getWebUserById(long webUserId) {
+        WebUserEntity webUserEntity = webUserDao.getWebUserById(webUserId);
+        return webUserEntity;
+    }
 }
