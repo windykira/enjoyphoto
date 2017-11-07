@@ -8,4 +8,6 @@ import com.enjoyphoto.entity.webuser.WebUserEntity;
 public interface WebUserDao {
 
     int createWebUser(WebUserEntity webUser);
+
+    WebUserEntity getWebUserById(long webUserId);
 }

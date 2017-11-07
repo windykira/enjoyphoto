@@ -20,5 +20,10 @@
         values(#{loginName},#{passWord},#{userName},#{mobile},#{email},#{logo},#{createDate},#{updateDate})
     </insert>
 
-
+    <select id="getWebUserById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select * from web_user
+        <where>
+            web_user.ID = #{webUserId}
+        </where>
+    </select>
 </mapper>

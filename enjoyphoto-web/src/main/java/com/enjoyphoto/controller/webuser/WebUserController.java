@@ -1,14 +1,20 @@
 package com.enjoyphoto.controller.webuser;
 
+import com.enjoyphoto.entity.webuser.WebUserEntity;
 import com.enjoyphoto.serivce.WebUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.RequestMethod;
+>>>>>>> a1ad3be3a4626bfd0d2d02e19891362de98a0703
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by windy on 2017/11/6.
@@ -40,9 +46,15 @@ public class WebUserController {
         return mav;
     }
 
+<<<<<<< HEAD
     @RequestMapping("/user")
     @ResponseBody
     public ModelAndView createUser(HttpServletRequest request) throws IOException
+=======
+    @RequestMapping(value = "/user",method = RequestMethod.POST)
+    @ResponseBody
+    public WebUserEntity createUser(HttpServletRequest request, WebUserEntity webUserEntity) throws IOException
+>>>>>>> a1ad3be3a4626bfd0d2d02e19891362de98a0703
     {
         ModelAndView mav = new ModelAndView();
         /*WebUserEntity webUserEntity = new WebUserEntity();
@@ -58,6 +70,18 @@ public class WebUserController {
         mav.setViewName("success");
         //HttpSession session = request.getSession();
         //session.setAttribute("name", customer.getName());
-        return mav;
+        webUserEntity.setCreateDate(new Date());
+        webUserEntity.setUpdateDate(new Date());
+        webUserService.createWebUser(webUserEntity);
+        return webUserEntity;
+    }
+
+    @RequestMapping(value = "/user",method = RequestMethod.GET)
+    @ResponseBody
+    public WebUserEntity getWebUserById(HttpServletRequest request) throws IOException
+    {
+        String str = "";
+        WebUserEntity webUserEntity = webUserService.getWebUserById(Long.valueOf(request.getParameter("userId")));
+        return webUserEntity;
     }
 }
