@@ -45,12 +45,34 @@ define(function(require,exports,module){
 
     $("#test2").click(function(){
 
-        var obj = {};
+        var obj = $("#myform").serialize();
         $.ajax({
             type: "POST",
             url: "/webUser/user",
-            data: {"userId":1,"_method": "DELETE"},
+            data: {userId:10,_method: "DELETE"},
             //contentType: "application/json;charset=utf-8",
+            dataType: "json",
+
+            success: function(data){
+                var s = '';
+            }
+
+        });
+    });
+
+    $("#test3").click(function(){
+
+        var obj = JSON.stringify($("#myform").serialize());
+        //obj.id = 10;
+        //obj._method = "PUT";
+        $.ajax({
+            type: "POST",
+            url: "/webUser/user",
+            data: {
+                _method:"PUT",
+                userId:10,
+                loginName:$("#loginName").val()
+            },
             dataType: "json",
 
             success: function(data){

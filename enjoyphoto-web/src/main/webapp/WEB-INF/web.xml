@@ -13,7 +13,7 @@
   </filter>
   <filter-mapping>
     <filter-name>httpMethodFilter</filter-name>
-    <url-pattern>/*</url-pattern>
+    <servlet-name>springmvc</servlet-name>
   </filter-mapping>
 
   <!-- Spring配置 -->

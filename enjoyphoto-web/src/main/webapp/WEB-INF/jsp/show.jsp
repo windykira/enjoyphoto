@@ -34,16 +34,17 @@
     </script>
 </head>
 <body>
-<h1>TTTTT</h1>
+<h1>Restful</h1>
 <form action="" id="myform" name="myform">
-    登录名：<input id="loginName" name="loginName"/><br/>
-        密码：<input type="password" id="password" name="passWord"/><br/>
-        姓名：<input id="userName" name="userName"/><br/>
-        手机：<input id="mobile" name="mobile"/><br/>
-        邮箱：<input id="email" name="email"/><br/>
-    <input type="button" id="test" value="test"/><br/>
-    <input type="button" id="test1" value="test1"/>
-    <input type="button" id="test2" value="test2"/>
+    登录名：<input id="loginName" name="loginName"/><p/>
+    &nbsp;密码：<input type="password" id="password" name="passWord"/><p/>
+    &nbsp;姓名：<input id="userName" name="userName"/><p/>
+    &nbsp;手机：<input id="mobile" name="mobile"/><p/>
+    &nbsp;邮箱：<input id="email" name="email"/><p/>
+    <input type="button" id="test" value="create"/>
+    <input type="button" id="test1" value="get"/>
+    <input type="button" id="test2" value="delete"/>
+    <input type="button" id="test3" value="post"/>
 </form>
 </body>
 </html>

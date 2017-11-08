@@ -1,5 +1,6 @@
 package com.enjoyphoto.controller.webuser;
 
+import com.enjoyphoto.entity.base.AjaxResult;
 import com.enjoyphoto.entity.webuser.WebUserEntity;
 import com.enjoyphoto.serivce.WebUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,11 +70,21 @@ public class WebUserController {
         return webUserEntity;
     }
 
-    @RequestMapping(value = "/user",method = RequestMethod.DELETE,produces = {"application/json"})
-    public void deleteWebUser(HttpServletRequest request) throws IOException
+    @RequestMapping(value = "/user",method = RequestMethod.DELETE)
+    @ResponseBody
+    public AjaxResult deleteWebUser(HttpServletRequest request) throws IOException
     {
-        String userId = request.getParameter("userId");
-        webUserService.deleteWebUserById(2);
+        webUserService.deleteWebUserById(Long.valueOf(request.getParameter("userId")));
+        AjaxResult ajaxResult = new AjaxResult();
+        return ajaxResult.success();
+    }
+
+    @RequestMapping(value = "/user",method = RequestMethod.PUT)
+    @ResponseBody
+    public AjaxResult updateWebUser(HttpServletRequest request) throws IOException
+    {
+        AjaxResult ajaxResult = new AjaxResult();
+        return ajaxResult.success();
     }
 
     @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
