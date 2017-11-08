@@ -43,6 +43,7 @@
         邮箱：<input id="email" name="email"/><br/>
     <input type="button" id="test" value="test"/><br/>
     <input type="button" id="test1" value="test1"/>
+    <input type="button" id="test2" value="test2"/>
 </form>
 </body>
 </html>

@@ -27,12 +27,13 @@ define(function(require,exports,module){
 
     $("#test1").click(function(){
 
+        var obj = {};
         $.ajax({
             type: "GET",
-            url: "/webUser/user",
+            url: "/webUser/user/"+1,
             //data: {loginName:$("#loginName").val()},
-            data: {userId:1},
-            contentType: "application/json;charset=utf-8",
+            //data: {userId:1},
+            //contentType: "application/json;charset=utf-8",
             dataType: "json",
 
             success: function(data){
@@ -41,4 +42,22 @@ define(function(require,exports,module){
 
         });
     });
+
+    $("#test2").click(function(){
+
+        var obj = {};
+        $.ajax({
+            type: "POST",
+            url: "/webUser/user",
+            data: {"userId":1,"_method": "delete"},
+            //contentType: "application/json;charset=utf-8",
+            dataType: "json",
+
+            success: function(data){
+                var s = '';
+            }
+
+        });
+    });
+
 });

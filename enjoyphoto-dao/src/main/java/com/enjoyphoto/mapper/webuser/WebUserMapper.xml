@@ -26,4 +26,8 @@
             web_user.ID = #{webUserId}
         </where>
     </select>
+
+    <delete id="deleteWebUserById" parameterType="java.lang.Long">
+        delete from web_user where ID = #{webUserId}
+    </delete>
 </mapper>

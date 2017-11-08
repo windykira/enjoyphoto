@@ -45,12 +45,12 @@ public class WebUserController {
         return mav;
     }
 
-    /*@RequestMapping(value = "/user",method = RequestMethod.PUT)
+    @RequestMapping(value = "/user",method = RequestMethod.POST)
     @ResponseBody
-    public WebUserEntity createUser(HttpServletRequest request, WebUserEntity webUserEntity) throws IOException
+    public WebUserEntity createUser(WebUserEntity webUserEntity) throws IOException
     {
         ModelAndView mav = new ModelAndView();
-        *//*WebUserEntity webUserEntity = new WebUserEntity();
+        /*WebUserEntity webUserEntity = new WebUserEntity();
         webUserEntity.setLoginName("test111");
         webUserEntity.setPassWord("123456");
         webUserEntity.setEmail("xxx@163.com");
@@ -59,22 +59,28 @@ public class WebUserController {
         webUserEntity.setUserName("测试");
         webUserEntity.setCreateDate(new Date());
         webUserEntity.setUpdateDate(new Date());
-        webUserService.createWebUser(webUserEntity);*//*
-        mav.setViewName("success");
+        webUserService.createWebUser(webUserEntity);
+        mav.setViewName("success");*/
         //HttpSession session = request.getSession();
         //session.setAttribute("name", customer.getName());
         webUserEntity.setCreateDate(new Date());
         webUserEntity.setUpdateDate(new Date());
         webUserService.createWebUser(webUserEntity);
         return webUserEntity;
-    }*/
+    }
 
-    @RequestMapping(value = "/user/{userId:\\d+}",method = RequestMethod.GET)
-    @ResponseBody
-    public WebUserEntity getWebUserById(@PathVariable("userId") long userId) throws IOException
+    @RequestMapping(value = "/user",method = RequestMethod.DELETE)
+    public void deleteWebUser(HttpServletRequest request) throws IOException
     {
-        String str = "";
-        WebUserEntity webUserEntity = webUserService.getWebUserById(userId);
+        String userId = request.getParameter("userId");
+        webUserService.deleteWebUserById(2);
+    }
+
+    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
+    @ResponseBody
+    public WebUserEntity getWebUserById(@PathVariable String userId) throws IOException
+    {
+        WebUserEntity webUserEntity = webUserService.getWebUserById(Long.valueOf(userId));
         return webUserEntity;
     }
 }

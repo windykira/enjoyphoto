@@ -10,4 +10,6 @@ public interface WebUserService {
     long createWebUser(WebUserEntity webUser);
 
     WebUserEntity getWebUserById(long webUserId);
+
+    void deleteWebUserById(long webUserId);
 }
