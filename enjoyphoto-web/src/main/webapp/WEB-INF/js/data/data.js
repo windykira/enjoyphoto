@@ -49,7 +49,7 @@ define(function(require,exports,module){
         $.ajax({
             type: "POST",
             url: "/webUser/user",
-            data: {"userId":1,"_method": "delete"},
+            data: {"userId":1,"_method": "DELETE"},
             //contentType: "application/json;charset=utf-8",
             dataType: "json",
 

@@ -69,7 +69,7 @@ public class WebUserController {
         return webUserEntity;
     }
 
-    @RequestMapping(value = "/user",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/user",method = RequestMethod.DELETE,produces = {"application/json"})
     public void deleteWebUser(HttpServletRequest request) throws IOException
     {
         String userId = request.getParameter("userId");
