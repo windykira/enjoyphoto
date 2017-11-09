@@ -27,12 +27,14 @@
     </div>
 
     <div class="index-center">
-        <div class="center-left oneline">
-            <div class="center-info">联系你我,分享生活,尽在 Enjoyphoto</div>
-            <img src="/image/ig.png" alt="">
-        </div>
-        <div class="center-right oneline">
-            <input id="newLoginName" name="newLoginName" class=""/>
+        <div class="center-container">
+            <div class="center-left oneline">
+                <div class="center-info">联系你我,分享生活,尽在 Enjoyphoto</div>
+                <img src="/image/ig.png" alt="">
+            </div>
+            <div class="center-right oneline">
+                <input id="newLoginName" name="newLoginName" class=""/>
+            </div>
         </div>
     </div>
 </div>

@@ -8,7 +8,9 @@
 */
 /*ul{list-style: none;float: left;}*/
 .index-center{min-width: 980px;height: 507px;background-color:#E0E4EF;display: block;}
+.center-container{margin-left:15%;padding-top:40px;}
 .center-left{font-family: inherit;color: #0E385F;font-size: 21px;font-weight: bold;line-height: 29px;display: block;
-    /*margin-left:15%*/;padding-top:40px;width: 450px;word-spacing: -1px;}
+    /*margin-left:15%;padding-top:40px;*/width: 450px;word-spacing: -1px;}
+.oneline{float: left;}
 /*
 .oneline{display: inline;}*/
