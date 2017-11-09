@@ -84,6 +84,11 @@ public class WebUserController {
     public AjaxResult updateWebUser(HttpServletRequest request) throws IOException
     {
         AjaxResult ajaxResult = new AjaxResult();
+        String email = request.getParameter("email");
+        WebUserEntity webUserEntity = webUserService.getWebUserById(Long.valueOf(request.getParameter("userId")));
+        webUserEntity.setEmail(email);
+        webUserEntity.setUpdateDate(new Date());
+        webUserService.updateWebUserById(webUserEntity);
         return ajaxResult.success();
     }
 

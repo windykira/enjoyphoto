@@ -12,4 +12,6 @@ public interface WebUserService {
     WebUserEntity getWebUserById(long webUserId);
 
     void deleteWebUserById(long webUserId);
+
+    void updateWebUserById(WebUserEntity webUser);
 }

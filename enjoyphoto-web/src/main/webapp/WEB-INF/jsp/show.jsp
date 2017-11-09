@@ -8,29 +8,6 @@
     <script src="../js/sea/sea.js"></script>
     <script type="text/javascript">
         seajs.use("../js/data/data.js");
-        //$(function(){
-        //	$("#test").click(function(){
-        /* $.ajax({
-         type:"POST",
-         url:"../customer/insertCustomer.html",
-         data:{id:5},
-         dataType:"json",
-         success:function(data){
-         var temp = data;
-         },
-         error:function(msg){
-
-         }
-         }); */
-        //		 var id="";
-        //		 $.sendRequestFunction("customer","queryCustomerById",id);
-        //	});
-        //});
-        /*$(document).ready(function(){
-            $("#test").click(function(){
-                alert(1);
-            });
-        });*/
     </script>
 </head>
 <body>

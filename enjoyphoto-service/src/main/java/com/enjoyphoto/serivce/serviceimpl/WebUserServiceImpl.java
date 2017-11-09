@@ -28,4 +28,8 @@ public class WebUserServiceImpl implements WebUserService {
     public void deleteWebUserById(long webUserId) {
         webUserDao.deleteWebUserById(webUserId);
     }
+
+    public void updateWebUserById(WebUserEntity webUser) {
+        webUserDao.updateWebUserById(webUser);
+    }
 }

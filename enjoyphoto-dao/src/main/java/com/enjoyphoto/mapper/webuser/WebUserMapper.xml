@@ -30,4 +30,29 @@
     <delete id="deleteWebUserById" parameterType="java.lang.Long">
         delete from web_user where ID = #{webUserId}
     </delete>
+
+    <update id="updateWebUserById" parameterType="com.enjoyphoto.entity.webuser.WebUserEntity">
+        update web_user
+        <set>
+            <if test="passWord != null and passWord !='' " >
+                PassWord = #{passWord,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null and userName !='' " >
+                UserName = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null and mobile !='' " >
+                Mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null and email !='' " >
+                Email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="logo != null and logo !='' " >
+                Logo = #{logo,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                UpdateDate = #{updateDate,jdbcType=DATE},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
 </mapper>

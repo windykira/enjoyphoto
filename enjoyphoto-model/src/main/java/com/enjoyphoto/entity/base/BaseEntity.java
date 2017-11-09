@@ -1,5 +1,6 @@
 package com.enjoyphoto.entity.base;
 
+
 import java.util.Date;
 
 /**

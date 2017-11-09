@@ -49,7 +49,7 @@ define(function(require,exports,module){
         $.ajax({
             type: "POST",
             url: "/webUser/user",
-            data: {userId:10,_method: "DELETE"},
+            data: {userId:3,_method: "DELETE"},
             //contentType: "application/json;charset=utf-8",
             dataType: "json",
 
@@ -63,15 +63,13 @@ define(function(require,exports,module){
     $("#test3").click(function(){
 
         var obj = JSON.stringify($("#myform").serialize());
-        //obj.id = 10;
-        //obj._method = "PUT";
         $.ajax({
             type: "POST",
             url: "/webUser/user",
             data: {
                 _method:"PUT",
-                userId:10,
-                loginName:$("#loginName").val()
+                userId:1,
+                email:$("#email").val()
             },
             dataType: "json",
 
