@@ -11,15 +11,28 @@
 <body>
 <div class="enjoy-container">
     <div class="index-header">
-        <div class="header-logo">
-            <h1><li>enjoyphoto</li></h1>
-            <div>ttt</div>
-        </div>
+        <table class="index-table">
+            <tbody>
+                <tr>
+                    <td class="input-label-1">手机号或邮箱</td>
+                    <td class="input-label-2" colspan="2">密码</td>
+                </tr>
+                <tr>
+                    <td><input id="loginName" name="loginName" class="index-input-text"/></td>
+                    <td><input type="password" id="passWord" name="passWord" class="index-input-text"/></td>
+                    <td><input type="button" id="login" name="login" value="登录"/></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
     <div class="index-center">
-        <div class="center-left">
+        <div class="center-left oneline">
             <div class="center-info">联系你我,分享生活,尽在 Enjoyphoto</div>
             <img src="/image/ig.png" alt="">
+        </div>
+        <div class="center-right oneline">
+            <input id="newLoginName" name="newLoginName" class=""/>
         </div>
     </div>
 </div>
