@@ -1,16 +1,16 @@
 .index-header{min-width: 980px;height: 82px;background-color:#3B5998;display: block;margin: 0px;padding: 0px;}
-.index-table{color:#E0E4EF;font-size: 14px;font-family: "Microsoft Yahei";padding-top: 15px;padding-left: 980px;}
-.input-label-1{padding-left: 20px;}
-.input-label-2{padding-left: 45px;}
+.header-label{float: left;font-size: 35px;color:#FFFFFF;font-weight: bold;font-family: "Microsoft YaHei";margin-left: 15%;margin-top: 20px;}
+
+.index-table{color:#E0E4EF;font-size: 12px;font-family: "Microsoft Yahei";padding-top: 8px;padding-left: 50%;}
+.index-table a{text-decoration:none;color: #E0E4EF;}
+.index-table a:hover{text-decoration:underline;}
 .index-input-text{width: 120px;}
-/*
-.header-logo{font-family: "Microsoft Yahei";list-style: none;margin-left: 15%;padding-top:5px;color: #FFFFFF;display: block;}
-*/
-/*ul{list-style: none;float: left;}*/
+
 .index-center{min-width: 980px;height: 507px;background-color:#E0E4EF;display: block;}
 .center-container{margin-left:15%;padding-top:40px;}
 .center-left{font-family: inherit;color: #0E385F;font-size: 21px;font-weight: bold;line-height: 29px;display: block;
-    /*margin-left:15%;padding-top:40px;*/width: 450px;word-spacing: -1px;}
-.oneline{float: left;}
-/*
-.oneline{display: inline;}*/
+            width: 450px;word-spacing: -1px;}
+
+.input-register input{width: 360px;height: 35px;border-radius: 5px;
+    border:1px solid #B9C1C7;font-size: 18px;font-family: inherit;margin-bottom: 9px;}
+
