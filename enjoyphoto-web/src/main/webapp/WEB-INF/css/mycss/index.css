@@ -11,6 +11,7 @@
 .center-left{font-family: inherit;color: #0E385F;font-size: 21px;font-weight: bold;line-height: 29px;display: block;
             width: 450px;word-spacing: -1px;}
 
+.center-right{float: right;position: absolute;left: 55%;top:15%;}
 .input-register input{width: 360px;height: 35px;border-radius: 5px;
     border:1px solid #B9C1C7;font-size: 18px;font-family: inherit;margin-bottom: 9px;}
 
