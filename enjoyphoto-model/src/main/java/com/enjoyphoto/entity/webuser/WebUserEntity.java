@@ -14,6 +14,12 @@ public class WebUserEntity extends BaseEntity{
     private String email;
     private String logo;
 
+    public WebUserEntity(String loginName,String passWord,String userName){
+        this.loginName = loginName;
+        this.passWord = passWord;
+        this.userName = userName;
+    }
+
     public String getPassWord() {
         return passWord;
     }

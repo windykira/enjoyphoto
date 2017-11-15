@@ -25,6 +25,10 @@ public class WebUserServiceImpl implements WebUserService {
         return webUserEntity;
     }
 
+    public WebUserEntity getWebUserByLoginNameAndPassword(String loginName, String passWord) {
+        return null;
+    }
+
     public void deleteWebUserById(long webUserId) {
         webUserDao.deleteWebUserById(webUserId);
     }

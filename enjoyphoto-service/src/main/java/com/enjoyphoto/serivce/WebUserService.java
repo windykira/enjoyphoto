@@ -11,6 +11,8 @@ public interface WebUserService {
 
     WebUserEntity getWebUserById(long webUserId);
 
+    WebUserEntity getWebUserByLoginNameAndPassword(String loginName,String passWord);
+
     void deleteWebUserById(long webUserId);
 
     void updateWebUserById(WebUserEntity webUser);
