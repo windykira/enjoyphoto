@@ -7,6 +7,10 @@
     <title>Insert title here</title>
     <%--<link href="/css/bootstrap/bootstrap.min.css" rel="Stylesheet" type="text/css">--%>
     <link href="/css/mycss/index.css" rel="Stylesheet" type="text/css">
+    <script src="/js/sea/sea.js"></script>
+    <script type="text/javascript">
+        seajs.use("/js/webuser/register.js");
+    </script>
 </head>
 <body>
 <div class="enjoy-container">
@@ -20,8 +24,8 @@
                     <td class="input-label-2" colspan="2">密码</td>
                 </tr>
                 <tr>
-                    <td><input id="loginName" name="loginName" class="index-input-text"/></td>
-                    <td><input type="password" id="passWord" name="passWord" class="index-input-text"/></td>
+                    <td><input id="loginLoginName" name="loginLoginName" class="index-input-text"/></td>
+                    <td><input type="loginPassword" id="loginPassword" name="passWord" class="index-input-text"/></td>
                     <td><input type="button" id="login" name="login" value="登录" class="index-input-button"/></td>
                 </tr>
                 <tr>
@@ -39,16 +43,17 @@
                 <div class="center-info">联系你我，分享生活，尽在 Enjoyphoto</div>
                 <img src="/image/ig.png" alt="">
             </div>
+            <form action="" id="registerForm">
             <div class="center-right">
                 <h1>注册</h1>
                 <div class="input-register">
                     <input id="userName" name="userName" placeholder="姓名"/>
                 </div>
                 <div class="input-register">
-                    <input id="newLoginName" name="newLoginName" placeholder="手机号或邮箱"/>
+                    <input id="loginName" name="loginName" placeholder="手机号或邮箱"/>
                 </div>
                 <div class="input-register">
-                    <input id="newPassWord" name="newPassWord" placeholder="创建密码"/>
+                    <input type="password" id="passWord" name="passWord" placeholder="创建密码"/>
                 </div>
                 <div class="bi-label">生日</div>
                 <div class="bi-select-container">
@@ -82,9 +87,10 @@
                     </p>
                 </div>
                 <div class="create-button">
-                    <button type="submit" class="webuser-submit button-1 mvm">创建账户</button>
+                    <button type="submit" class="webuser-submit button-1 mvm" id="register">创建账户</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>

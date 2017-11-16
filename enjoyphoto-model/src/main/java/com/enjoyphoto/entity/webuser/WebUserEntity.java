@@ -2,6 +2,8 @@ package com.enjoyphoto.entity.webuser;
 
 import com.enjoyphoto.entity.base.BaseEntity;
 
+import java.util.Date;
+
 /**
  * Created by windy on 2017/11/6.
  */
@@ -13,6 +15,20 @@ public class WebUserEntity extends BaseEntity{
     private String mobile;
     private String email;
     private String logo;
+
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public WebUserEntity(){
+
+    }
 
     public WebUserEntity(String loginName,String passWord,String userName){
         this.loginName = loginName;
