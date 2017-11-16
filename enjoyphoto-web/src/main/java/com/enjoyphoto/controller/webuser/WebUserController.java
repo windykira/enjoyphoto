@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
 /**
@@ -27,8 +28,7 @@ public class WebUserController {
     WebUserService webUserService;
 
     @RequestMapping("/show")
-    public ModelAndView show() throws IOException
-    {
+    public ModelAndView show() throws IOException {
         ModelAndView mav = new ModelAndView();
         /*WebUserEntity webUserEntity = new WebUserEntity();
         webUserEntity.setLoginName("test111");
@@ -46,10 +46,9 @@ public class WebUserController {
         return mav;
     }
 
-    @RequestMapping(value = "/user",method = RequestMethod.POST)
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public WebUserEntity createUser(WebUserEntity webUserEntity) throws IOException
-    {
+    public WebUserEntity createUser(WebUserEntity webUserEntity) throws IOException {
         ModelAndView mav = new ModelAndView();
         /*WebUserEntity webUserEntity = new WebUserEntity();
         webUserEntity.setLoginName("test111");
@@ -66,23 +65,25 @@ public class WebUserController {
         //session.setAttribute("name", customer.getName());
         webUserEntity.setCreateDate(new Date());
         webUserEntity.setUpdateDate(new Date());
-        webUserService.createWebUser(webUserEntity);
+        try {
+            webUserService.createWebUser(webUserEntity);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
         return webUserEntity;
     }
 
-    @RequestMapping(value = "/user",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/user", method = RequestMethod.DELETE)
     @ResponseBody
-    public AjaxResult deleteWebUser(HttpServletRequest request) throws IOException
-    {
+    public AjaxResult deleteWebUser(HttpServletRequest request) throws IOException {
         webUserService.deleteWebUserById(Long.valueOf(request.getParameter("userId")));
         AjaxResult ajaxResult = new AjaxResult();
         return ajaxResult.success();
     }
 
-    @RequestMapping(value = "/user",method = RequestMethod.PUT)
+    @RequestMapping(value = "/user", method = RequestMethod.PUT)
     @ResponseBody
-    public AjaxResult updateWebUser(HttpServletRequest request) throws IOException
-    {
+    public AjaxResult updateWebUser(HttpServletRequest request) throws IOException {
         AjaxResult ajaxResult = new AjaxResult();
         String email = request.getParameter("email");
         WebUserEntity webUserEntity = webUserService.getWebUserById(Long.valueOf(request.getParameter("userId")));
@@ -92,10 +93,9 @@ public class WebUserController {
         return ajaxResult.success();
     }
 
-    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
+    @RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
     @ResponseBody
-    public WebUserEntity getWebUserById(@PathVariable String userId) throws IOException
-    {
+    public WebUserEntity getWebUserById(@PathVariable String userId) throws IOException {
         WebUserEntity webUserEntity = webUserService.getWebUserById(Long.valueOf(userId));
         return webUserEntity;
     }

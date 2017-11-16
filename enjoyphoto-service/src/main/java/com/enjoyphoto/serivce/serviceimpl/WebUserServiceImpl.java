@@ -3,8 +3,12 @@ package com.enjoyphoto.serivce.serviceimpl;
 import com.enjoyphoto.dao.webuser.WebUserDao;
 import com.enjoyphoto.entity.webuser.WebUserEntity;
 import com.enjoyphoto.serivce.WebUserService;
+import com.enjoyphoto.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by windy on 2017/11/6.
@@ -15,8 +19,12 @@ public class WebUserServiceImpl implements WebUserService {
     @Autowired
     WebUserDao webUserDao;
 
-    public long createWebUser(WebUserEntity webUser) {
-        int addKey = webUserDao.createWebUser(webUser);
+    public long createWebUser(WebUserEntity webUser) throws UnsupportedEncodingException,
+            NoSuchAlgorithmException {
+
+        String alt = MD5Util.getRandomStr(6);
+        webUser.setPassWord(MD5Util.EncoderByMd5(webUser.getPassWord(),alt));
+        webUserDao.createWebUser(webUser);
         return webUser.getId();
     }
 
