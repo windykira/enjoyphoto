@@ -16,8 +16,8 @@
     </resultMap>
 
     <insert id="createWebUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.enjoyphoto.entity.webuser.WebUserEntity">
-        insert into web_user(LoginName,PassWord,UserName,Mobile,Email,Logo,CreateDate,UpdateDate)
-        values(#{loginName},#{passWord},#{userName},#{mobile},#{email},#{logo},#{createDate},#{updateDate})
+        insert into web_user(LoginName,PassWord,Alt,UserName,Mobile,Email,Logo,CreateDate,UpdateDate)
+        values(#{loginName},#{passWord},#{alt},#{userName},#{mobile},#{email},#{logo},#{createDate},#{updateDate})
     </insert>
 
     <select id="getWebUserById" parameterType="java.lang.Long" resultMap="BaseResultMap">

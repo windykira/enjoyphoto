@@ -43,7 +43,7 @@
                 <div class="center-info">联系你我，分享生活，尽在 Enjoyphoto</div>
                 <img src="/image/ig.png" alt="">
             </div>
-            <form action="" id="registerForm">
+            <form action="webUser/user" id="registerForm" method="post">
             <div class="center-right">
                 <h1>注册</h1>
                 <div class="input-register">

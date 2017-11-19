@@ -17,6 +17,15 @@ public class WebUserEntity extends BaseEntity{
     private String logo;
 
     private Date birthday;
+    private String alt;
+
+    public String getAlt() {
+        return alt;
+    }
+
+    public void setAlt(String alt) {
+        this.alt = alt;
+    }
 
     public Date getBirthday() {
         return birthday;

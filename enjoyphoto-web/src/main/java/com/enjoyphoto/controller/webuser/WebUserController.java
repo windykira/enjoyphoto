@@ -48,7 +48,7 @@ public class WebUserController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public WebUserEntity createUser(WebUserEntity webUserEntity) throws IOException {
+    public ModelAndView createUser(WebUserEntity webUserEntity) throws IOException {
         ModelAndView mav = new ModelAndView();
         /*WebUserEntity webUserEntity = new WebUserEntity();
         webUserEntity.setLoginName("test111");
@@ -70,7 +70,8 @@ public class WebUserController {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        return webUserEntity;
+        mav.setViewName("success");
+        return mav;
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.DELETE)

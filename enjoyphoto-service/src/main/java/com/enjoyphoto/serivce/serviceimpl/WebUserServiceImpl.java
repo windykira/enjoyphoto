@@ -24,6 +24,7 @@ public class WebUserServiceImpl implements WebUserService {
 
         String alt = MD5Util.getRandomStr(6);
         webUser.setPassWord(MD5Util.EncoderByMd5(webUser.getPassWord(),alt));
+        webUser.setAlt(alt);
         webUserDao.createWebUser(webUser);
         return webUser.getId();
     }

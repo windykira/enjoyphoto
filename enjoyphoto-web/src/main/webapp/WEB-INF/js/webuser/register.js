@@ -2,7 +2,7 @@ define(function(require,exports,module){
 
     require("../jquery/jquery.min.js");
 
-    $("#register").click(function(){
+    /*$("#register").click(function(){
 
         var obj = $("#registerForm").serialize();
         $.ajax({
@@ -14,17 +14,17 @@ define(function(require,exports,module){
 
             success: function(data){
                 var s = '';
-                /*$('#resText').empty();   //清空resText里面的所有内容
+                /!*$('#resText').empty();   //清空resText里面的所有内容
                  var html = '';
                  $.each(data, function(commentIndex, comment){
                  html += '<div class="comment"><h6>' + comment['username']
                  + ':</h6><p class="para"' + comment['content']
                  });
-                 $('#resText').html(html);*/
+                 $('#resText').html(html);*!/
             }
 
         });
-    });
+    });*/
 
     $("#test1").click(function(){
 
