@@ -58,13 +58,13 @@
                 <div class="bi-label">生日</div>
                 <div class="bi-select-container">
                     <span class="bi-span">
-                        <select class="bi-select" id="hi-year">
+                        <select class="bi-select" id="year">
                             <option value="1995">1995</option>
                         </select>
-                        <select class="bi-select" id="hi-month">
+                        <select class="bi-select" id="month">
                             <option value="11">11月</option>
                         </select>
-                        <select class="bi-select" id="hi-day">
+                        <select class="bi-select" id="day">
                             <option value="13">13日</option>
                         </select>
                         <span class="bi-help"><a href="#">为什么需要提供生日信息？</a></span>
