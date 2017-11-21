@@ -3,6 +3,7 @@ package com.enjoyphoto.controller.webuser;
 import com.enjoyphoto.entity.base.AjaxResult;
 import com.enjoyphoto.entity.webuser.WebUserEntity;
 import com.enjoyphoto.serivce.WebUserService;
+import com.enjoyphoto.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -47,7 +49,7 @@ public class WebUserController {
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public ModelAndView createUser(WebUserEntity webUserEntity) throws IOException {
+    public ModelAndView createUser(HttpServletRequest request,WebUserEntity webUserEntity) throws IOException {
         ModelAndView mav = new ModelAndView();
         /*WebUserEntity webUserEntity = new WebUserEntity();
         webUserEntity.setLoginName("test111");
@@ -62,11 +64,16 @@ public class WebUserController {
         mav.setViewName("success");*/
         //HttpSession session = request.getSession();
         //session.setAttribute("name", customer.getName());
+        String year = request.getParameter("year");
+        String month = request.getParameter("month");
+        String day = request.getParameter("day");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         webUserEntity.setCreateDate(new Date());
         webUserEntity.setUpdateDate(new Date());
         try {
+            webUserEntity.setBirthday(format.parse(year+"-"+month+"-"+day));
             webUserService.createWebUser(webUserEntity);
-        } catch (NoSuchAlgorithmException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         mav.setViewName("success");
