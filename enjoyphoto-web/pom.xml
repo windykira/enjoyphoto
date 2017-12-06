@@ -22,6 +22,12 @@
             <artifactId>enjoyphoto-service</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.enjoyframework</groupId>
+            <artifactId>enjoyframework</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>enjoyphoto-web</finalName>
