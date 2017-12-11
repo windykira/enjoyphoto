@@ -9,6 +9,7 @@
     <module>enjoyphoto-service</module>
     <module>enjoyphoto-dao</module>
     <module>enjoyphoto-web</module>
+    <module>enjoyphoto-cas</module>
   </modules>
   <packaging>pom</packaging>
 
