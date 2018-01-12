@@ -7,12 +7,14 @@ public class MyThreadA extends Thread{
 
     private MyService myService;
 
-    public MyThreadA(MyService myService){
+    public MyThreadA(MyService myService) {
         this.myService = myService;
     }
 
+
     public void run(){
 
-        myService.print(new Object());
+
     }
+
 }
