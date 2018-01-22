@@ -4,7 +4,7 @@ import com.enjoyphoto.entity.base.AjaxResult;
 import com.enjoyphoto.entity.webuser.WebUserEntity;
 import com.enjoyphoto.serivce.WebUserService;
 import com.enjoyphoto.utils.MD5Util;
-import com.framework.utils.EnjoyCache;
+//import com.framework.utils.EnjoyCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -69,7 +69,7 @@ public class WebUserController {
         String month = request.getParameter("month");
         String day = request.getParameter("day");
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        EnjoyCache.get("test");
+        //EnjoyCache.get("test");
         webUserEntity.setCreateDate(new Date());
         webUserEntity.setUpdateDate(new Date());
         try {

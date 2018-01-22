@@ -1,19 +1,20 @@
 package com.enjoyphoto.thread;
 
 /**
- * Created by Administrator on 2017/12/26.
+ * Created by windy on 2017/12/27.
  */
 public class MyThreadA extends Thread{
 
-    private String selectKey = "";
+    private MyService myService;
 
-    public MyThreadA(String selectKey){
-        this.selectKey = selectKey;
+    public MyThreadA(MyService myService) {
+        this.myService = myService;
     }
+
 
     public void run(){
 
-        RedisCache.getAllKeys(selectKey);
+
     }
 
 }
