@@ -7,8 +7,10 @@ public class ThreadMain {
 
     public static void main(String[] args) throws InterruptedException {
 
-        String num = TestException.getExceptionValue();
-        String str = "";
+        //String num = TestException.getExceptionValue();
+        String str = "abc";
+        String s = new String("abc");
+        System.out.println(str == s);
         /*Print print = new Print();
         new Thread(print).start();
         System.out.println("Stop it!");
