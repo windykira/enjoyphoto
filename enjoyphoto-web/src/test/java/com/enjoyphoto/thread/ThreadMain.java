@@ -15,5 +15,14 @@ public class ThreadMain {
         for (int i = 0; i < 100; i++) {
             myThreads[i].start();
         }
+        //String num = TestException.getExceptionValue();
+        String str = "abc";
+        String s = new String("abc");
+        System.out.println(str == s);
+        /*Print print = new Print();
+        new Thread(print).start();
+        System.out.println("Stop it!");
+        Thread.sleep(2000);
+        print.setIsContinuePrint(false);*/
     }
 }
