@@ -14,7 +14,6 @@ public class MyThreadA extends Thread{
 
     public void run(){
 
-
     }
 
 }

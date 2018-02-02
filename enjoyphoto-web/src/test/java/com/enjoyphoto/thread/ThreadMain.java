@@ -5,14 +5,15 @@ package com.enjoyphoto.thread;
  */
 public class ThreadMain {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
-        String num = TestException.getExceptionValue();
-        String str = "";
-        /*Print print = new Print();
-        new Thread(print).start();
-        System.out.println("Stop it!");
-        Thread.sleep(2000);
-        print.setIsContinuePrint(false);*/
+        MyThread[] myThreads = new MyThread[100];
+        for (int i = 0; i < 100; i++) {
+            myThreads[i] = new MyThread();
+        }
+
+        for (int i = 0; i < 100; i++) {
+            myThreads[i].start();
+        }
     }
 }
