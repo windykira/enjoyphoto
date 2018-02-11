@@ -23,11 +23,11 @@
             <version>${project.version}</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.enjoyframework</groupId>
             <artifactId>enjoyframework</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <finalName>enjoyphoto-web</finalName>
