@@ -1,0 +1,11 @@
+[INFO] [2018-02-0120:41:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0120:42:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0120:46:03][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0120:47:14][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0121:01:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0121:02:17][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0121:19:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
+[INFO] [2018-02-0121:23:46][org.springframework.context.support.FileSystemXmlApplicationContext]Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@7ced5732: startup date [Thu Feb 01 21:23:46 CST 2018]; root of context hierarchy
+[INFO] [2018-02-0121:23:46][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from file [D:\Project\enjoyphoto\enjoyphoto\enjoyphoto-web\config\spring-test.xml]
+[INFO] [2018-02-0121:27:06][org.springframework.context.support.FileSystemXmlApplicationContext]Refreshing org.springframework.context.support.FileSystemXmlApplicationContext@7ced5732: startup date [Thu Feb 01 21:27:06 CST 2018]; root of context hierarchy
+[INFO] [2018-02-0121:27:06][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [config/spring-test.xml]
